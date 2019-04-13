@@ -12,21 +12,21 @@ services:
       - "/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"
       - "dbdata:/var/lib/postgresql/data"
 
-  api:
-    build: ./api
-    expose:
-      - 8080
-    ports:
-      - 8080:8080
-    volumes:
-      - ./api:/usr/src/app/
-    links:
-      - db
-    environment:
-      - PGHOST: 'db'
-      - PGDATABASE: 'postgres'
-      - PGUSER: 'postgres'
-      - PGPASSWORD: 'postgres'
+#  api:
+#    build: ./api
+#    expose:
+#      - 8080
+#    ports:
+#      - 8080:8080
+#    volumes:
+#      - ./api:/usr/src/app/
+#    links:
+#      - db
+#    environment:
+#      - PGHOST: 'db'
+#      - PGDATABASE: 'postgres'
+#      - PGUSER: 'postgres'
+#      - PGPASSWORD: 'postgres'
 
 volumes:
   dbdata:

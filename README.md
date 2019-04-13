@@ -22,4 +22,7 @@ CREATE DATABASE book_store;
 ```
 \dt
 ```
-
+# run app server
+```
+python3 manage.py runserver
+```
